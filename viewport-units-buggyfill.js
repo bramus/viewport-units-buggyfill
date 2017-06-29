@@ -392,8 +392,8 @@
     }
 
     function getViewport() {
-      var vh = window.innerHeight;
-      var vw = window.innerWidth;
+      var vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+      var vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 
       return {
         vh: vh,
